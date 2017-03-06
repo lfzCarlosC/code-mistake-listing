@@ -1,0 +1,30 @@
+1.递归中的错误
+  *变量在递归函数内是否是增量更新，还是虚对象，极为混乱
+
+public List<String> recursive( List<String> list,TreeNode root,String path){
+	        if(root ==null ) return list;
+	         path += "".equals(path)?root.val:"->"+root.val;
+path增量更新？值传递和引用传递
+
+
+StringBuffer a= new StringBuffer();
+	    	a.append("aaaaa");
+	    	s.write(a);
+	    	System.out.println(a);
+public void write(StringBuffer a){
+	    	a.append("sss");
+	    	System.out.println("===="+a.hashCode());
+	    }
+
+
+StringBuffer a= "";
+	    	a+="aaaaa";
+	    	s.write(a);
+	    	System.out.println(a);
+public void write(String a){
+	    	a+="sss";
+	    	System.out.println("===="+a.hashCode());
+	    }
+
+
+
