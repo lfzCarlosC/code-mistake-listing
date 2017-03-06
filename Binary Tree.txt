@@ -10,7 +10,16 @@
     global变量  下一层不需要自己编程就知道上层的值，累加遍历的历史， 例如 对象传递 注意(string stringBuffer)的区分
 3.顺序：
     先序  problem=1+ problem(n-1) 逐步分解， 类似于揪面团里的一小块
+                d=logic(c)
+                traverse(left,d)
+                traverse(right,d)
+
     后序  divide(problem)=1....n; problem=1+....+n  类似于切好成所有小面团然后包饺子
+          模板：
+                a=traverse(left)
+                b=traverse(right)
+                c=logic(a+b)
+                return c
     中序
 
 步骤：
