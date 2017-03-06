@@ -1,0 +1,15 @@
+public void subsets(int[] num){
+  ArrayList<Integer> path = new ArrayList<Integer>();
+  Arrays.sort(num);
+  subsetHelper(path,num,0);
+}
+
+public void subsetHelper(ArrayList<Integer> path, int[] num, int pos){
+outputPath.add(path)
+  for(int i=pos; i<num.length;i++){
+    path.add(num[i]);
+    subsetHelper(path,num,i+1);
+    path.remove(path.size()-1);
+  }
+}
+

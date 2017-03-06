@@ -39,3 +39,5 @@ public void write(String a){
            用途：不需要记录前面遍历过整条path的路径，只需要记录本层节点的情况，传递给下一层
 
 
+
+

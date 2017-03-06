@@ -1,0 +1,51 @@
+List order 
+Stack stack
+
+preOrderTraversal(root){
+
+  if(root==null)  return order;
+
+  stack.push(root)
+  while(!stack.isEmpty()){
+    unit = stack.pop();
+    order.add(unit)
+
+    if(unit.right!=null)
+      stack.push(unit.right);
+
+    if(unit.left !=null)
+      stack.push(unit.left)
+
+  }
+
+  return order;  
+
+}
+
+midOrderTravdrsal(root){
+  if(root==null) return order;
+  stack.push(root)
+  while(!isEmpty())
+    while(root.left!=null){
+      stack.push(root.left)
+      root = root.left
+    }
+    //check right root
+    if(root.right!=null)
+      stack.push(root.right)
+      root =root.right
+    else //leaf
+      order.add(stack.pop())
+      root=stack.pop()
+      if(root.right!=null)
+        stack.push(root.right)
+        root=root.right
+      else
+        order.add(root)
+
+  }
+}
+
+postOrderTraversal(){
+
+}

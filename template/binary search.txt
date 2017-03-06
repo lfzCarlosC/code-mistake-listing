@@ -1,0 +1,25 @@
+public void search(int[] num,int a){
+int start=0;
+int end=num.length()-1;
+int mid=0;
+while(start+1<end){
+  mid = (start+end)/2;
+  if(num[mid]>a)
+    right=mid;
+  else if(num[mid]<a)
+    left=mid;
+  else
+    return mid;
+}
+
+if(num[start]==a)
+  return start
+if(num[end]==a)
+  return end
+
+return -1;
+}
+
+start+1<end
+结束时一定是start+1=end，也就是相邻点
+n如果找不到时，一定是 num[start]<a<num[end]

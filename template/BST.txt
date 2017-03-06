@@ -1,0 +1,54 @@
+临界点(叶子节点)的返回
+题目是判断是否问题，要想怎样把底部的值往上不变的传：
+  if(Math.abs(left-right)>1 || left==-1 || right==-1)
+    return -1
+Math.abs(left-right)>1 是促使=-1的触发条件，一定会有这样一个触发条件(Math.abs(left-right)>1 || left==-1 || right==-1)
+***只想一个节点-当前节点，对同一个节点 构造divide 和构造conquer
+
+舍弃  return Max( Max)
+否定返回  if(formula=** || left=-1)  return -1
+全局变量的应用
+
+1.结束条件
+2.divide
+3.conquer till return 
+
+
+
+start condition
+business pattern
+how to connect to parent layer:   
+  recursion()
+    ....return **
+
+                                
+
+public int maxDepth(Node root){
+  if(root==null)  return 0;
+  
+  int left = maxDepth(root.left)
+  int right = maxepth(root.right)
+
+  if(Math.abs(left-right)>1 || left==-1 || right==-1)
+    return -1
+
+  return Math.max(left,right)+1;
+}
+
+
+if(node.left==null && node.right==null )
+  if(sum==num)
+    list.add(new List(node))
+    return yes
+
+if(recurse(sum+node.val,node.left,num)==yes)  list.get(size-1).add(node) return yes
+if(recurse(sum+node.val,node.right,num)==yes) list.get(size-1).add(node) return yes
+
+
+
+
+basic operations:
+Find element
+delete element
+
+
