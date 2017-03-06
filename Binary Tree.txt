@@ -4,8 +4,8 @@
 public List<String> recursive( List<String> list,TreeNode root,String path){
 	        if(root ==null ) return list;
 	         path += "".equals(path)?root.val:"->"+root.val;
-path增量更新？值传递和引用传递
-
+--path增量更新？值传递和引用传递？
+复习下面两个情况
 
 StringBuffer a= new StringBuffer();
 	    	a.append("aaaaa");
@@ -26,5 +26,16 @@ public void write(String a){
 	    	System.out.println("===="+a.hashCode());
 	    }
 
+
+
+--> 结论: 
+    模板结构: 
+           recursive(StringBuffer path)
+              path.append ....   //增量更新path内容
+           用途：递归问题中记录遍历过得数据的历史，例如 leetcode 257 每条path
+
+           recursive(String path)
+              path += ....   //虚对象，不需要增量积累信息 只是需要运用本节点在本层中做处理
+           用途：不需要记录前面遍历过整条path的路径，只需要记录本层节点的情况，传递给下一层
 
 
