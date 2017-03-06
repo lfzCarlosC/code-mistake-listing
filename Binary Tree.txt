@@ -1,6 +1,7 @@
 考点:
 1.递归顺序+逻辑
 2.非递归方式构造bt:non-recursion算法
+    ->stack
 3.bt的crud操作
 4.其他的应用: 排列类 组合类 图 深搜
 5.BFS
@@ -12,6 +13,13 @@
      value=func(param)
      value  上层的返回值传到此层，一般用于后续遍历
      param  此层的输出作为下层函数传递参数，一般用于先序遍历
+     
+     更快的返回
+            某些需要眼正返回值是布尔型的问题，当有一个false时，就需要马上返回，结构模板：
+                traverse(traverse(left)==false||traverse(right)==false;||logic(...))
+                  return false;
+
+                  
 2.变量：
     虚变量    只在每层有效，下一层是一个新变量  例如 原型变量传递
     global变量  下一层不需要自己编程就知道上层的值，累加遍历的历史， 例如 对象传递 注意(string stringBuffer)的区分
