@@ -6,6 +6,38 @@
 4.其他的应用: 排列类 组合类 图 深搜
 5.BFS
 
+非递归方式做 preorder inorder postorder:
+preorder
+    node=stack.pop()
+    visit node
+    stack.push(node.left)
+    stack.push(node.right)
+
+inorder 
+    node=stack.pop()
+    list.add(node.val)
+    if node.right!=null
+        pushLeft(stack,node.right)
+
+
+    pushLeft(stack,node):
+        while(node!=null){
+          stack.push(node);
+          node=node.left
+        }
+
+postorder
+     node=stack.pop()
+     
+     if node.left!=null:
+       pushRight(stack,node.left,list)
+
+     pushRight(stack,node,list):
+        while(node!=null){
+           stack.push(node)
+           list.add(0,node.val)
+           node=node.right
+        }
 
 递归设计考虑基本要素：
 0.拆分成子问题
