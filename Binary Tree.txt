@@ -5,6 +5,8 @@
 3.bt的crud操作
 4.其他的应用: 排列类 组合类 图 深搜
 5.BFS
+  -> O(n^2)
+  -> O(n)
 
 非递归方式做 preorder inorder postorder:
 preorder
@@ -73,6 +75,11 @@ postorder
 1.算法
 2.边界条件
 3.presentation
+
+典型考点:
+1. max sum one-path
+2. max sum cross-path
+3. tree level traversal(BFS)
 
 ####递归中的错误
   *变量在递归函数内是否是增量更新，还是虚对象，极为混乱
