@@ -128,4 +128,4 @@ public void write(String a){
         param 适合前序遍历
 
 
-
+    * queue实例化 Queue<TreeNode> queue = new LinkedList<TreeNode>();
