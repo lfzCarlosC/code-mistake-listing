@@ -109,7 +109,9 @@ public void write(String a){
 	    	System.out.println("===="+a.hashCode());
 	    }
 
-
+QUESTIONS:
+1.LOWEST ANCESTOR
+2.DELETE Node
 
 --> 结论: 
     模板结构: 
