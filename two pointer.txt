@@ -1,8 +1,15 @@
 two pointer:
 
 2 sum
-3 sum
+
+   return index or return value
+  
+3 sum   
+   start [(point1 point2) of 2 sum]   direction ->
+   [(point1 point2) of 2 sum]  start  direction <-
+
 3 sum closest
+   
 4 sum
 k sum
 triangle count

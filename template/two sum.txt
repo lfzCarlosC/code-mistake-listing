@@ -1,9 +1,19 @@
 Array.sort(a)
 
-for(i,j){
+for(i=0,j=length-1;i<j;){
 
   if(a[i]+a[j]==target){ 
     add to results
+
+    return
+
+  or
+
+    while(i+1<j && a[i]==a[i+1]) i++;
+    while(i+1<j && a[j]==a[j-1]) j--;
+    i++;
+    i--;
+
   }else if(a[i]+a[j]>target){//隐藏[i+1,j-1]不同和j比较
     j--;
   }else{
@@ -11,3 +21,5 @@ for(i,j){
   }
   
 }
+
+
