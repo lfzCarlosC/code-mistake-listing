@@ -28,3 +28,12 @@ for(i=0,j=length-1;i<j;){
 focus 2: find numbers closet to target(abs)
          excluded conditions of finding match target
 
+two pointer Ä£°å:
+
+for(){
+  if(a[i]>a[j]) pr if(a[i]+a[j]>target)
+   i++ or j--
+  ....
+}
+
+
