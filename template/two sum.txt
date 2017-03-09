@@ -5,21 +5,26 @@ for(i=0,j=length-1;i<j;){
   if(a[i]+a[j]==target){ 
     add to results
 
-    return
+    return  //if the answer requires to return early [focus 1]
 
   or
-
-    while(i+1<j && a[i]==a[i+1]) i++;
-    while(i+1<j && a[j]==a[j-1]) j--;
-    i++;
+    
+    //不只一种解，寻找多种解，需要排重
+    i++; 
     i--;
+    while(i<j && a[i]==a[i+1]) i++;
+    while(i<j && a[j]==a[j-1]) j--; // skip duplicate
+   
 
-  }else if(a[i]+a[j]>target){//隐藏[i+1,j-1]不同和j比较
+  }else if(a[i]+a[j]>target){//1
+  //隐藏[i+1,j-1]不同和j比较
     j--;
-  }else{
+  }else{//2   两者其中之一包含不满足题目解的条件 [focus 2]
     i++;
   }
-  
+ 
 }
 
+focus 2: find numbers closet to target(abs)
+         excluded conditions of finding match target
 
