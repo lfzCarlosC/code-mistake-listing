@@ -1,0 +1,19 @@
+two pointer:
+
+2 sum
+3 sum
+3 sum closest
+4 sum
+k sum
+triangle count
+trapping rain water
+container with most water
+
+
+partition
+
+partition-array
+sort colors
+partition Array by Odd and Even
+Sort letters by Case
+Valid Palindrome
