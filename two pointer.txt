@@ -14,6 +14,15 @@ two pointer:
 k sum
 triangle count
 trapping rain water
+    i j  left  right
+    if(height[left]<height[right]){
+        update left (if)
+        i++
+    }else{
+        update right (if)
+        j--
+    }
+
 container with most water
 
 
