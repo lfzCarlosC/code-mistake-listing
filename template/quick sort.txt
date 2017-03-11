@@ -1,0 +1,30 @@
+public void quicksort(int[] num,int start,int end,int k){
+		int pivot=0;
+		if(start<end){
+			pivot = partition(num,start,end);
+			quicksort(num,start,pivot-1,k);
+			quicksort(num,pivot+1,end,k);	
+		}
+		
+		
+		
+	}
+	
+	public int partition(int[] num,int left,int right){
+		int pivot=num[left];
+		
+		while(left<right){
+			
+			while(left<right && pivot >= num[right]) right--;
+			num[left]=num[right];
+			while(left<right && pivot <= num[left])  left++;
+			num[right]=num[left];
+		}
+		
+		num[left]=pivot;
+		return left;
+	}
+
+
+point 1:  pivot <= num[left]     pivot >= num[right]
+point 2:  [3 1 4 2] -> [* 3 * *]   pivot 那个元素一定占据他第几大的位置

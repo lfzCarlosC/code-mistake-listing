@@ -7,9 +7,13 @@ two pointer:
 3 sum   
    start [(point1 point2) of 2 sum]   direction ->
    [(point1 point2) of 2 sum]  start  direction <-
-
+   skip duplicate elements:
+      i++
+      j--
+      while(i<j&&num[i]==num[i-1]) i++;
+      while(i<j&&nums[j]==num[j+1]) j--;
 3 sum closest
-   
+   closet problem: abs
 4 sum
 k sum
 triangle count
@@ -27,6 +31,11 @@ container with most water
 
 
 partition
+
+quick sort
+  pivot left right
+  while - right-- - num[left]=num[right]
+  while - left++ - num[right]=num[left]
 
 partition-array
 sort colors
