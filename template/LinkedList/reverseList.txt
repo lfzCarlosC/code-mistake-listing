@@ -1,0 +1,21 @@
+//cur
+//next
+//prev
+public void(ListNode list){
+
+  if(list.next==null) return list;
+
+  ListNode next = list.next;
+  ListNode cur = list;
+  ListNode tmp=null;
+  while(cur!=null){
+    tmp = next.next;
+    next.next = cur;
+    next=tmp;
+    
+    
+    
+  }
+
+
+}

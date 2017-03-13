@@ -6,7 +6,38 @@
     ListNode dummy=new ListNode(-1);//指向head，用于保存head
     ListNode tmp = dummy;//用于循环前驱,tmp指针会改变
 
-
 2. 创建永远是 先建立下一个，再cur = cur.next
 
+3. 二级指针可以避免使用prev
+   http://www.cnblogs.com/gentleh/p/3960608.html
+
+4. 指针乱指存在环的问题
+     * 头指针next没置空
+
 *creation of LinkedList
+
+
+
+*reverse List
+
+	public ListNode reverse(ListNode list){
+      if(list == null) return null;
+
+	  ListNode next = list.next;
+	  ListNode cur = list;
+	  ListNode tmp=null;
+	  while(next!=null){
+		if(cur==list && cur!=null)
+			cur.next=null;
+            //save the third one
+	    tmp = next.next;
+            //reverse pointer
+	    next.next = cur;
+            //move cur and next
+	    cur=next;
+	    next=tmp;
+	    
+	  }
+
+	  return cur;
+	}
