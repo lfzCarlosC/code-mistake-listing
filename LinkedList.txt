@@ -14,9 +14,20 @@
 4. 指针乱指存在环的问题
      * 头指针next没置空
 
+5. 头插法
+   while
+     tmp=new;
+     tmp.next=dummy.next;
+     dummy.next=tmp;
+
+   尾插法
+   tmp=dummy
+   while
+     tmp.next=new;
+     tmp=tmp.next;
+
 *creation of LinkedList
-
-
+   follow above 5
 
 *reverse List
 
