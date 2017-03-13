@@ -48,8 +48,15 @@ postorder
      value  上层的返回值传到此层，一般用于后续遍历
      param  此层的输出作为下层函数传递参数，一般用于先序遍历
      
+     返回
+         1
+         -2
+         --3
+         如果想返回1，head = traverse();  return head;
+         如果想返回3， return traverse();
+  
      更快的返回
-            某些需要眼正返回值是布尔型的问题，当有一个false时，就需要马上返回，结构模板：
+            某些需要验证返回值是布尔型的问题，当有一个false时，就需要马上返回，结构模板：
                 traverse(traverse(left)==false||traverse(right)==false;||logic(...))
                   return false;
 
