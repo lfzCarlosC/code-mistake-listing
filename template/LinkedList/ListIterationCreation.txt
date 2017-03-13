@@ -1,0 +1,13 @@
+ListNode dummy = new ListNode(-1);
+ListNode pre = dummy;
+
+while(L1!=null){
+pre.next = new ListNode(logic transformation of L1);
+
+L1 = L1.next;
+pre = pre.next;
+
+}
+
+ListNode head=dummy.next;
+return head;
