@@ -1,12 +1,44 @@
 point: 收集每道题循环的条件 以及 结束循环的条件， 这个非常耗时间
 
 技巧 and awareness:
+0. 链表和数组写程序的区别在于， 数组可以 i-1, 链表不能，看:
+		//i+1 例子    链表仅仅支持这种，因为链表没有的前驱节点的指针，除非保存起来，但这样会复杂，也容易出错
+                int i=-1;
+		
+		for(;i+1<nums.length&&nums[i+1]<=a;){
+			i++;
+		}
+		
+		System.out.println(nums[i]);
+	
+		//j-1  例子
+		int j=0;
+		
+		for(;j<nums.length&&nums[j]<=a;){
+			j++;
+		}
+		
+		System.out.println(nums[j-1]);
+
+                //链表循环操作模板
+                ListNode head=null;
+		ListNode dummy= new ListNode(-1);
+		dummy.next=head;
+		head =dummy;
+		while(head.next!=null && head.next.val>10){//好理解，不用多想，head.next不满足的话，一定是head满足了
+			head = head.next;
+		}
+
+
+
 1. 哨兵节点 dummyNode  避免边界条件
    见:  http://blog.csdn.net/chencheng126/article/details/39029889
 
 
     ListNode dummy=new ListNode(-1);//指向head，用于保存head
     ListNode tmp = dummy;//用于循环前驱,tmp指针会改变
+
+    
 
 2. 创建永远是 先建立下一个，再cur = cur.next
 
@@ -31,6 +63,13 @@ point: 收集每道题循环的条件 以及 结束循环的条件， 这个非常耗时间
 6. 1(cur)-2(next)-3, when increment cur and next: cur = next; next=next.next
 
 7. 在循环链表的时候一定要注意    head=head.next
+
+8. 链表中间某一个位置中断掉，一定要考虑边界条件！
+
+9. create list from another list 注意环
+
+*insert elements into list: always first insert/always end insert/create a list from another list
+*delete list
 
 *creation of LinkedList
    follow above 5
