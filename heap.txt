@@ -3,7 +3,7 @@ Interface Comparator
     PriorityQueue queue = new PriorityQueue(10,com);
 PriorityQueue  iterator不能按照sort顺序遍历
 
-k-th
+k-th smallest
 
   for(int i=0;i<list.size();i++){
     if(queue.size()<k)
