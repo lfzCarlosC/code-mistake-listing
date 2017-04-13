@@ -2,6 +2,11 @@ Interface Comparator
     MaxComparator com = new MaxComparat()
     PriorityQueue queue = new PriorityQueue(10,com);
 PriorityQueue  iterator不能按照sort顺序遍历
+面试时，不要去想hashHeap，全用PQ。 当涉及到定点删除时可以说用hashheap去简化，因为O(logn),这时就不要想pq了，重头开始实现
+
+deque：
+   后来的数比当前数大，就把当前数删掉
+   后来的数比当前数小，就把后来数保留
 
 k-th smallest
 
