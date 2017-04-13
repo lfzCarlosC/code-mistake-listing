@@ -27,4 +27,7 @@ public void quicksort(int[] num,int start,int end,int k){
 
 
 point 1:  pivot <= num[left]     pivot >= num[right]
-point 2:  [3 1 4 2] -> [* 3 * *]   pivot 那个元素一定占据他第几大的位置
+point 2:  [3 1 4 2] -> [* 3 * *]   pivot 那个元素一定占据他
+
+point3: quicksort->if(start<end)
+point4: while(left<right)

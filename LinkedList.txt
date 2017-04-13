@@ -1,7 +1,8 @@
 point: 收集每道题循环的条件 以及 结束循环的条件， 这个非常耗时间
 
 技巧 and awareness:
-0. 链表和数组写程序的区别在于， 数组可以 i-1, 链表不能，看:
+0. 链表查找以及crud操作
+     和数组写程序的区别在于， 数组可以 i-1, 链表不能，看:
 		//i+1 例子    链表仅仅支持这种，因为链表没有的前驱节点的指针，除非保存起来，但这样会复杂，也容易出错
                 int i=-1;
 		
@@ -48,7 +49,8 @@ point: 收集每道题循环的条件 以及 结束循环的条件， 这个非常耗时间
 4. 指针乱指存在环的问题
      * 头指针next没置空
 
-5. 头插法
+5. 创建链表
+   头插法
    while
      tmp=new;
      tmp.next=dummy.next;
@@ -66,10 +68,6 @@ point: 收集每道题循环的条件 以及 结束循环的条件， 这个非常耗时间
 
 8. 链表中间某一个位置中断掉，一定要考虑边界条件！
 
-9. create list from another list 注意环
-
-*insert elements into list: always first insert/always end insert/create a list from another list
-*delete list
 
 *creation of LinkedList
    follow above 5

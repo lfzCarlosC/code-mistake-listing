@@ -1,0 +1,53 @@
+#quicksort based
+
+class Solution {
+    /*
+     * @param k : description of k
+     * @param nums : array of nums
+     * @return: description of return
+     */
+    public int kthLargestElement(int k, int[] nums) {
+        // write your code here
+        if(nums==null || nums.length==0) return 0;
+        return quicksort(nums,0,nums.length-1,k);
+    }
+    
+    
+    public int quicksort(int[] nums, int left,int right,int k){
+        while(left<=right){                            //forgot =
+            int index = partition(nums,left,right);
+            if(index+1>k)
+              return quicksort(nums,left,index-1,k);    // forgot return
+            else if(index+1<k)
+              return quicksort(nums,index+1,right,k);  // forgot return
+            else
+              return nums[index];
+            
+            
+        }
+        
+        return 0;
+    }
+    
+    
+    public int partition(int[] nums, int left, int right){
+        int temp = nums[right];
+        
+        while(left<right){
+            
+            while(left<right && nums[left]>=temp) left++;
+            nums[right]=nums[left];
+            while(left<right && nums[right]<=temp) right--;
+            nums[left]=nums[right];
+        }
+        
+        nums[right]=temp;
+        return right;
+        
+    }
+    
+    
+};
+
+
+

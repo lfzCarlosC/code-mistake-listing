@@ -1,0 +1,17 @@
+Interface Comparator
+    MaxComparator com = new MaxComparat()
+    PriorityQueue queue = new PriorityQueue(10,com);
+PriorityQueue  iterator不能按照sort顺序遍历
+
+k-th
+
+  for(int i=0;i<list.size();i++){
+    if(queue.size()<k)
+      queue.offer(ele)
+    else{
+      if(queue.peek()>list.get(i)){
+         queue.poll();
+         queue.offer(list.get(i))
+       }
+    }
+  }
